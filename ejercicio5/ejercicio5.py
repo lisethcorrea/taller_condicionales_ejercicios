@@ -8,15 +8,12 @@ co=int(input("digite su consumo: "))
 
 # processing
 cf=10000
-vco=cf
-vco1=cf+((co-50)*2000)
-vco2=cf+((co-200)*3000)+300000
 
 if co<=50:
-    total_pagar=("su total a pagar es: " + str(vco))
+    msj= cf
 else:
-    if co>50 and co<=200:
-        total_pagar=("su total a pagar es: " + str(vco1))
+    if co<=200:
+        msj= cf+2000(co-50)
     else:
         if co>200:
          total_pagar=("su total a pagar es: " + str(vco2))
