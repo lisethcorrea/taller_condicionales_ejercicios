@@ -10,13 +10,13 @@ co=int(input("digite su consumo: "))
 cf=10000
 
 if co<=50:
-    msj= cf
+    total_pagar= cf
 else:
     if co<=200:
-        msj= cf+2000(co-50)
+        total_pagar= cf + 2000*(co-50)
     else:
         if co>200:
-         total_pagar=("su total a pagar es: " + str(vco2))
+         total_pagar=cf + 3000*(co-50)
         
   
 
