@@ -23,6 +23,7 @@ else:
 
 # output
 
+
 print("")
 print("-------------------------")
 print("resultados de la ganancia")

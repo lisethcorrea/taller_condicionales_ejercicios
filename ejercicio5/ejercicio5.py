@@ -22,6 +22,7 @@ else:
 
 # output
 
+
 print("")
 print("----------------------------")
 print("este es el valor de su factura")

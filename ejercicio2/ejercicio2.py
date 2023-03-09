@@ -20,6 +20,7 @@ else:
 
 # output
 
+
 print("")
 print("-----------------------")
 print("resultados del prestamo")

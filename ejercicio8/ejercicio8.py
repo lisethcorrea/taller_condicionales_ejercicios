@@ -11,6 +11,7 @@ if x%y==0:
 else:
     msj= ("no son multiplos")
 
+
 # output
 
 print(msj)

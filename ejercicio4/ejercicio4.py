@@ -34,6 +34,7 @@ else:
                                 msj=("Obesidad mórbida (obesidad de grado IV)")
 
 # input
+
 print("")
 print("------------------")
 print("resultados del imc")

@@ -24,8 +24,6 @@ else:
         else:
            suma=("la suma no equivale a otro entero de la suma")
 
-
 # output
-
 print("")
 print(suma)

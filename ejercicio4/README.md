@@ -3,4 +3,5 @@
 ## Diseño
 
 ## DIAGRAMA DE FLUJO 
+
 ![digrama de flujo](diagrama.png "diagrama de flujo")
