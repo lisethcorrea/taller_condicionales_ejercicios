@@ -3,6 +3,7 @@ print("-----------------------------------")
 print("-----indice de masa corporal-------")
 print("-----------------------------------")
 
+
 # input
 m=float(input("digite el peso de la persona (kg): "))
 p=float(input("digite la altura de la persona (m): "))

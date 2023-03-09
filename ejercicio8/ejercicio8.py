@@ -12,6 +12,7 @@ else:
     msj= ("no son multiplos")
 
 
+
 # output
 
 print(msj)

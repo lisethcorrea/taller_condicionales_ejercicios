@@ -5,6 +5,7 @@ print("programa para realizar un prestamo bancario")
 print("-------------------------------------------")
 
 
+
 # input
 ing=int(input("digite sus ingresos mensuales: "))
 deu=int(input("digite su número de deudas: "))

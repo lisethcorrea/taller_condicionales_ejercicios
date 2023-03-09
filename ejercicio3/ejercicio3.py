@@ -4,6 +4,8 @@ print("-----GANANCIAS DEL VENDEDOR-------")
 print("----------------------------------")
 # input
 
+
+
 p_compra=float(input("digite el valor del producto: "))
 
 # processing

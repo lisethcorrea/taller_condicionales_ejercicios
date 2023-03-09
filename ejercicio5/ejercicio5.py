@@ -6,6 +6,7 @@ print("-----------------------------")
 
 co=int(input("digite su consumo: "))
 
+
 # processing
 cf=10000
 

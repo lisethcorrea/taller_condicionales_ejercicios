@@ -5,6 +5,7 @@ print("-------------------------------------------------------")
 print("Programa para indicar el cuadrante de  unas coordenadas")
 print("-------------------------------------------------------")
 
+
 #input
 
 x = float(input("Digite la coordenada x: "))

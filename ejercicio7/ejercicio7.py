@@ -9,6 +9,7 @@ b=int(input("digite el segundo numero entero: "))
 c=int(input("digite el tercer numero entero: "))
 
 
+
 # processing
 p1=a+b
 p2=a+c

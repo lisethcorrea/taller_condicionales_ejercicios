@@ -8,6 +8,7 @@ c=int(input("digite el valor de b: "))
 #processing
 
 
+
 d=(b**2 -4*a*c)
 
 if d==0:
