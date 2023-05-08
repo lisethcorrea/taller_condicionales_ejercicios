@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de el precio del producto</title>
+
+</head>
+<body bgcolor="chartreuse">
+  <h1 align="center">Calculadora de precio del producto</h1>
+  <form>
+    <label for="costo">Precio de costo:</label>
+    <input type="number" id="costo" name="costo"><br><br>
+    <button type="button" onclick="calcularPrecio()">Calcular precio de venta</button>
+  </form>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularPrecio() {
+      let costo = Number(document.getElementById("costo").value);
+      let precioVenta = 0;
+
+      if (costo < 3000) {
+        precioVenta = costo * 1.15;
+      } else if (costo >= 3000 && costo <= 6000) {
+        precioVenta = costo + 500;
+      } else {
+        precioVenta = costo * 1.25;
+      }
+
+      document.getElementById("resultado").innerHTML = "El precio de venta es $" + precioVenta.toFixed(2);
+    }
+  </script>
+</body>
+</html>

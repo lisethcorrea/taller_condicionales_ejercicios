@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora de ecuación de segundo grado</title>
+  </head>
+  <body bgcolor="red">
+    <h1>Calculadora de ecuaciónes de segundo grado</h1>
+    <form>
+      <label for="coeficienteA">Coeficiente a:</label>
+      <input type="number" id="coeficienteA" name="coeficienteA"><br>
+
+      <label for="coeficienteB">Coeficiente b:</label>
+      <input type="number" id="coeficienteB" name="coeficienteB"><br>
+
+      <label for="coeficienteC">Coeficiente c:</label>
+      <input type="number" id="coeficienteC" name="coeficienteC"><br>
+
+      <input type="button" value="Calcular raíces" onclick="calcularRaices()">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+      function calcularRaices() {
+        const a = parseInt(document.getElementById("coeficienteA").value);
+        const b = parseInt(document.getElementById("coeficienteB").value);
+        const c = parseInt(document.getElementById("coeficienteC").value);
+
+        const discriminante = b * b - 4 * a * c;
+
+        if (discriminante > 0) {
+          const raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+          const raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+          document.getElementById("resultado").innerHTML = "Las raíces son " + raiz1 + " y " + raiz2;
+        } else if (discriminante === 0) {
+          const raiz = -b / (2 * a);
+          document.getElementById("resultado").innerHTML = "La ecuación tiene una raíz doble en " + raiz;
+        } else {
+          const parteReal = (-b / (2 * a)).toFixed(2);
+          const parteImaginaria = (Math.sqrt(-discriminante) / (2 * a)).toFixed(2);
+          document.getElementById("resultado").innerHTML = "Las raíces son " + parteReal + " + " + parteImaginaria + "i y " + parteReal + " - " + parteImaginaria + "i";
+        }
+      }
+    </script>
+  </body>
+</html>

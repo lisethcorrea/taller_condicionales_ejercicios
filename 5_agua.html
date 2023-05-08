@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcular Gasto de Agua</title>
+</head>
+<body>
+	<h1>Calcular Gasto de Agua</h1>
+	<form>
+		<label for="metros">Número de m2 de agua gastados:</label>
+		<input type="number" id="metros" name="metros"><br><br>
+		<button type="button" onclick="calcular()">Calcular</button>
+	</form>
+	<p id="resultado"></p>
+
+	<script>
+		function calcular() {
+			// Obtener el valor del input
+			let metros = document.getElementById("metros").value;
+
+			// Calcular el gasto de agua
+			let gasto = 0;
+			if (metros <= 50) {
+				gasto = 10000;
+			} else if (metros <= 200) {
+				gasto = 10000 + (metros - 50) * 2000;
+			} else {
+				gasto = 10000 + 150 * 2000 + (metros - 200) * 3000;
+			}
+
+			// Mostrar el resultado
+			document.getElementById("resultado").innerHTML = "El gasto de agua es $" + gasto;
+		}
+	</script>
+</body>
+</html>

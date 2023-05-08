@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de cuadrante</title>
+</head>
+<body>
+  <h1>Coordenadas cartesianas </h1>
+  <form>
+    <label for="coord-x">Coordenada x:</label>
+    <input type="number" id="coord-x" name="coord-x"><br><br>
+    <label for="coord-y">Coordenada y:</label>
+    <input type="number" id="coord-y" name="coord-y"><br><br>
+    <button type="button" onclick="calcularCuadrante()">Calcular cuadrante</button>
+  </form>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularCuadrante() {
+      let x = Number(document.getElementById("coord-x").value);
+      let y = Number(document.getElementById("coord-y").value);
+      let resultado = "";
+
+      if (x > 0 && y > 0) {
+        resultado = "El punto está en el primer cuadrante.";
+      } else if (x < 0 && y > 0) {
+        resultado = "El punto está en el segundo cuadrante.";
+      } else if (x < 0 && y < 0) {
+        resultado = "El punto está en el tercer cuadrante.";
+      } else if (x > 0 && y < 0) {
+        resultado = "El punto está en el cuarto cuadrante.";
+      } else if (x == 0 && y != 0) {
+        resultado = "El punto está sobre el eje y.";
+      } else if (x != 0 && y == 0) {
+        resultado = "El punto está sobre el eje x.";
+      } else {
+        resultado = "El punto está en el origen.";
+      }
+
+      document.getElementById("resultado").innerHTML = resultado;
+    }
+  </script>
+</body>
+</html>

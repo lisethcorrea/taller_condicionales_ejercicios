@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulador de préstamo bancario</title>
+</head>
+<body>
+  <h1> préstamo bancario </h1>
+  <form>
+    <label for="ingreso">Ingreso mensual:</label>
+    <input type="number" id="ingreso" name="ingreso"><br><br>
+    <label for="monto">Monto del préstamo:</label>
+    <input type="number" id="monto" name="monto"><br><br>
+    <button type="button" onclick="calcularPrestamo()">Calcular préstamo</button>
+  </form>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularPrestamo() {
+      let ingreso = Number(document.getElementById("ingreso").value);
+      let monto = Number(document.getElementById("monto").value);
+      let resultado = "";
+
+      if (ingreso >= 945200 && monto <= ingreso && monto >= 0) {
+        resultado = "El préstamo ha sido otorgado.";
+      } else if (ingreso < 945200) {
+        resultado = "El préstamo no puede ser otorgado porque el ingreso mensual no es suficiente para pagar el prestamo.";
+      } else if (monto > ingreso) {
+        resultado = "El préstamo no puede ser dado debido a que el monto es mayor que el ingreso mensual.";
+      } else if (monto < 0) {
+        resultado = "El monto solicitado no puede ser negativo.";
+      } else {
+        resultado = "El préstamo no puede ser otorgado porque el solicitante tiene otras deudas.";
+      }
+
+      document.getElementById("resultado").innerHTML = resultado;
+    }
+  </script>
+</body>
+</html>

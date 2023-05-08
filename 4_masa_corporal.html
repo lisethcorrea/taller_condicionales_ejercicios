@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de índice de masa corporal</title>
+</head>
+<body bgcolor="red">
+  <h1>Calculadora de índice de masa corporal</h1>
+  <form>
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" name="peso"><br><br>
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="altura" name="altura"><br><br>
+    <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+  </form>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularIMC() {
+      let peso = Number(document.getElementById("peso").value);
+      let altura = Number(document.getElementById("altura").value);
+      let imc = peso / (altura * altura);
+      let diagnostico = "";
+
+      if (imc < 16) {
+        diagnostico = "Criterio de ingreso en hospital.";
+      } else if (imc >= 16 && imc < 17) {
+        diagnostico = "Infrapeso.";
+      } else if (imc >= 17 && imc < 18) {
+        diagnostico = "Bajo peso.";
+      } else if (imc >= 18 && imc < 25) {
+        diagnostico = "Peso normal (saludable).";
+      } else if (imc >= 25 && imc < 30) {
+        diagnostico = "Sobrepeso (obesidad de grado I).";
+      } else if (imc >= 30 && imc < 35) {
+        diagnostico = "Sobrepeso crónico (obesidad de grado II).";
+      } else if (imc >= 35 && imc < 40) {
+        diagnostico = "Obesidad premórbida (obesidad de grado III).";
+      } else {
+        diagnostico = "Obesidad mórbida (obesidad de grado IV).";
+      }
+
+      document.getElementById("resultado").innerHTML = "Tu IMC es " + imc.toFixed(2) + ". " + diagnostico;
+    }
+  </script>
+</body>
+</html>
